@@ -14,6 +14,7 @@ namespace Hackathon.Application.BusinessRules.Common.Utility
 
         public const string StatusPending = "Pending";
         public const string StatusApproved = "Approved";
+        public const string StatusActive = "Active";
         public const string StatusAccepted = "Accepted";
         public const string StatusRejected = "Rejected";
         public const string StatusCompleted = "Completed";

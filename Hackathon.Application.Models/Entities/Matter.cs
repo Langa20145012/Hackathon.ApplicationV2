@@ -15,6 +15,7 @@ namespace Hackathon.Application.Models.Entities
         public int MatterId { get; set; }
         public string? AccountNumber { get; set; }
         public string? Type { get; set; }
+        public string? Status { get; set; }
         public string? Participant { get; set; }       
         public string? ClientEmail { get; set; }
         public DateTime Createddate { get; set; } = DateTime.UtcNow;
