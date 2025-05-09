@@ -17,6 +17,7 @@ using Hackathon.Application.Infrustructure.Data;
 using Hackathon.Application.Infrustructure.Repository;
 using Hackathon.Application.Models;
 using Hackathon.Application.Models.Entities;
+using Hackathon.Application.Infrustructure.Emails;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,6 +56,7 @@ builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddScoped<IMatterService, MatterService>();
 builder.Services.AddScoped<IDocumentTypeService, DocumentTypeService>();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
+builder.Services.AddScoped<EmailServiceClient>();
 
 var app = builder.Build();
 
