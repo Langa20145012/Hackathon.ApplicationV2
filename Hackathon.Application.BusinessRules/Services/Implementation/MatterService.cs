@@ -66,5 +66,12 @@ namespace Hackathon.Application.BusinessRules.Services.Implementation
             _unitOfWork.Matter.Update(Matter);
             _unitOfWork.Save();
         }
+
+		public Matter Initialize(int id)
+		{
+			var entity = GetMatterById(id);
+			return _unitOfWork.Matter.Initialize(entity);
+		}
+
 	}
 }

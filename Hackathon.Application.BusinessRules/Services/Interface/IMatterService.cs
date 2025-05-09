@@ -15,5 +15,7 @@ namespace Hackathon.Application.BusinessRules.Services.Interface
         void UpdateMatter(Matter Matter);
         Matter GetMatterById(int id);
         bool DeleteMatter(int id);
-    }
+
+		Matter Initialize(int id);
+	}
 }
