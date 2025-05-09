@@ -14,6 +14,7 @@ namespace Hackathon.Application.Models.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int MatterId { get; set; }
         public string? AccountNumber { get; set; }
+        public string? Description { get; set; }
         public string? Type { get; set; }
         public string? Status { get; set; }
         public string? Participant { get; set; }       

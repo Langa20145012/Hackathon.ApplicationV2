@@ -21,8 +21,8 @@ namespace Hackathon.Application.UI.Controllers
         public IActionResult Index()
         {
             var matterDetails = new MatterDetails();
-
             var Matterlist = _MatterService.GetAllMatter();
+
             matterDetails.ActiveMatterList = Matterlist.Where(f => f.Status == SD.StatusActive).ToList();
             matterDetails.RejectedMatterList = Matterlist.Where(f => f.Status == SD.StatusRejected).ToList();
             matterDetails.CompletedMatterList = Matterlist.Where(f => f.Status == SD.StatusCompleted).ToList();
