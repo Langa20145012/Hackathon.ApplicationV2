@@ -10,13 +10,16 @@ namespace Hackathon.Application.UI.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IMatterService _MatterService;      
+        private readonly IMatterService _MatterService;
+		private readonly IDocumentService _DocumentService;
 
-        public HomeController(ILogger<HomeController> logger, IMatterService MatterService)
+		public HomeController(ILogger<HomeController> logger, IMatterService MatterService, IDocumentService DocumentServices)
         {
             _logger = logger;
-            _MatterService = MatterService; 
-        }
+            _MatterService = MatterService;
+            _DocumentService = DocumentServices;
+
+		}
 
         public IActionResult Index()
         {
@@ -29,6 +32,13 @@ namespace Hackathon.Application.UI.Controllers
 
             return View(matterDetails);
         }
+		public IActionResult MatterDetail(int MatterId)
+		{
+			var matterDetails = new MatterDetails();
+			matterDetails.Matter = _MatterService.GetMatterById(MatterId);
+            matterDetails.DocumentList = _DocumentService.GetAllDocument().Where(f => f.MatterId == MatterId).ToList();
+			return View(matterDetails);
+		}
 
 		public IActionResult Dashboard()
 		{

@@ -18,9 +18,9 @@ namespace Hackathon.Application.Models.Entities
         [ForeignKey("DocumentType")]
         public int DocumentTypeId { get; set; }
         public string? FileName { get; set; }
-        public string? ContentType { get; set; }
+        //public string? ContentType { get; set; }
 		public decimal? ADVPercentage { get; set; }		
-		public string? Additional { get; set; } = "None";
+		//public string? Additional { get; set; } = "None";
         [Required]
         public byte[]? FileContent { get; set; }
         [Required]

@@ -53,12 +53,12 @@ namespace Hackathon.Application.BusinessRules.Services.Implementation
 
         public IEnumerable<Document> GetAllDocument()
         {
-            return _unitOfWork.Document.GetAll(includeProperties: "Villa");
+            return _unitOfWork.Document.GetAll();
         }
 
         public Document GetDocumentById(int id)
         {
-            return _unitOfWork.Document.Get(u => u.DocumentId == id, includeProperties: "Villa");
+            return _unitOfWork.Document.Get(u => u.DocumentId == id);
         }
 
         public void UpdateDocument(Document Document)
