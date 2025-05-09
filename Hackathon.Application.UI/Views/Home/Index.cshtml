@@ -140,18 +140,18 @@
                                                         <div class="modal fade" id="exampleModalTooltips-@(item.MatterId)" tabindex="-1" role="dialog" aria-labelledby="exampleModalTooltips" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                                 <div class="modal-content">
-                                                                    <form method="post" class="row" asp-controller="Dashboard" asp-action="Home">
+                                                                    <form method="post" class="row" asp-controller="Home" asp-action="Initialize">
 
                                                                         <input type="hidden" name="MatterId" value="@item.MatterId" />
                                                                         <div class="modal-header">
-                                                                            <h5 class="modal-title" id="exampleModalCenterTitle">Assign - @item.AccountNumber</h5>
+                                                                            <h5 class="modal-title" id="exampleModalCenterTitle">Initialize - @item.AccountNumber</h5>
                                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                 <span aria-hidden="true">&times;</span>
                                                                             </button>
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <p>
-                                                                                
+                                                                                Are you sure you want to initialize the matter?
                                                                             </p>
                                                                         </div>
                                                                         <div class="modal-footer">
@@ -264,7 +264,7 @@
                                                         <div class="modal fade" id="exampleModalTooltips-@(item.MatterId)" tabindex="-1" role="dialog" aria-labelledby="exampleModalTooltips" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                                 <div class="modal-content">
-                                                                    <form method="post" class="row" asp-controller="Dashboard" asp-action="Home">
+                                                                    <form method="post" class="row" asp-controller="Home" asp-action="Dashboard">
 
                                                                         <input type="hidden" name="MatterId" value="@item.MatterId" />
                                                                         <div class="modal-header">
@@ -468,6 +468,26 @@
             "scrollX": true,
             "scrollY": true
         });
+    });
+
+    document.getElementById("initBtn").addEventListener("click", function (event) {
+
+        const matterId = @Model.Matter.MatterId;
+
+        fetch('/Home/Initialize', {
+
+            method: 'POST',
+
+            headers: {
+
+                'Content-Type': 'application/json'
+
+            },
+
+            body: JSON.stringify({ matterId: matterId })
+
+        })
+
     });
 </script>
 

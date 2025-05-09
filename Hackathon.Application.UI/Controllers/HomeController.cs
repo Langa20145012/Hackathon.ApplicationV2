@@ -21,6 +21,13 @@ namespace Hackathon.Application.UI.Controllers
 
 		}
 
+        [HttpPost]
+        public IActionResult Initialize(int MatterId)
+        {
+            var matter = _MatterService.Initialize(MatterId);
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Index()
         {
             var matterDetails = new MatterDetails();

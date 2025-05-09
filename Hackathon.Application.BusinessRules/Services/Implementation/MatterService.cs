@@ -70,8 +70,7 @@ namespace Hackathon.Application.BusinessRules.Services.Implementation
 		public Matter Initialize(int id)
 		{
 			var entity = GetMatterById(id);
-            //return _unitOfWork.Matter.Initialize(entity);
-            return null;
+            return _unitOfWork.Matter.Initialize(entity);            
 		}
 
 	}
