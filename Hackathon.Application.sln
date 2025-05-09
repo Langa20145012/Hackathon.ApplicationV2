@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackathon.Application.Backend.Services", "Hackathon.Application.Backend.Services", "{F74B44C6-DAF8-4274-A09D-300A9F7C0B6E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackathon.Application.UI", "Hackathon.Application.UI\Hackathon.Application.UI.csproj", "{402EA725-A185-437D-8C7F-A5B120843FA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackathon.Application.Models", "Hackathon.Application.Models\Hackathon.Application.Models.csproj", "{B6AF586D-328F-48C8-A269-D0AE7D7B8AF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackathon.Application.Infrustructure", "Hackathon.Application.Infrustructure\Hackathon.Application.Infrustructure.csproj", "{CF8CD92C-5D48-4B88-89B0-8ED764C5BB59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackathon.Application.BusinessRules", "Hackathon.Application.BusinessRules\Hackathon.Application.BusinessRules.csproj", "{8C12C167-C1A5-456C-A4C4-811E78A07444}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackathon.Application.Bootstrap", "Hackathon.Application.Bootstrap", "{CFA47A4E-1969-417F-B4D7-6CDC7D5AF77F}"
+	ProjectSection(SolutionItems) = preProject
+		metronic_html_v8.2.2_demo22.zip = metronic_html_v8.2.2_demo22.zip
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{402EA725-A185-437D-8C7F-A5B120843FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402EA725-A185-437D-8C7F-A5B120843FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402EA725-A185-437D-8C7F-A5B120843FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402EA725-A185-437D-8C7F-A5B120843FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6AF586D-328F-48C8-A269-D0AE7D7B8AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6AF586D-328F-48C8-A269-D0AE7D7B8AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6AF586D-328F-48C8-A269-D0AE7D7B8AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6AF586D-328F-48C8-A269-D0AE7D7B8AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF8CD92C-5D48-4B88-89B0-8ED764C5BB59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8CD92C-5D48-4B88-89B0-8ED764C5BB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF8CD92C-5D48-4B88-89B0-8ED764C5BB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF8CD92C-5D48-4B88-89B0-8ED764C5BB59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C12C167-C1A5-456C-A4C4-811E78A07444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C12C167-C1A5-456C-A4C4-811E78A07444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C12C167-C1A5-456C-A4C4-811E78A07444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C12C167-C1A5-456C-A4C4-811E78A07444}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B6AF586D-328F-48C8-A269-D0AE7D7B8AF4} = {F74B44C6-DAF8-4274-A09D-300A9F7C0B6E}
+		{CF8CD92C-5D48-4B88-89B0-8ED764C5BB59} = {F74B44C6-DAF8-4274-A09D-300A9F7C0B6E}
+		{8C12C167-C1A5-456C-A4C4-811E78A07444} = {F74B44C6-DAF8-4274-A09D-300A9F7C0B6E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B81093B-5CAE-4FBD-869F-CFDE8BAE4CE1}
+	EndGlobalSection
+EndGlobal
