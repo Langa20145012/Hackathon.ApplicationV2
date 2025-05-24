@@ -719,7 +719,7 @@
 							<div class="app-navbar-item">
 								<!--begin::Drawer wrapper-->
 								<div class="btn btn-icon btn-color-white bg-hover-white bg-hover-opacity-10 lh-1 position-relative" id="kt_drawer_chat_toggle">
-									<i class="ki-duotone ki-message-text-2 fs-1" style="color:white">
+									<i class="ki-duotone ki-message-text-2 fs-1" style="color:black">
 										<span class="path1"></span>
 										<span class="path2"></span>
 										<span class="path3"></span>
@@ -735,7 +735,7 @@
 							<div class="app-navbar-item">
 								<!--begin::Menu toggle-->
 								<a href="#" class="btn btn-icon btn-color-white bg-hover-white bg-hover-opacity-10" data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" style="color:black">
-									<i class="ki-duotone ki-night-day theme-light-show fs-1" style="color:white">
+									<i class="ki-duotone ki-night-day theme-light-show fs-1" style="color:black">
 										<span class="path1"></span>
 										<span class="path2"></span>
 										<span class="path3"></span>
@@ -813,14 +813,12 @@
 								<!--begin::User info-->
 								<div class="btn btn-flex align-items-center bg-hover-white bg-hover-opacity-10 py-2 ps-3 pe-1" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
 									<!--begin::Name-->
-									<div class="d-none d-md-flex flex-column align-items-end justify-content-center me-2 me-md-4">
-										<span class="text-black fs-8 fw-bold lh-1 mb-1" style="color:black">@UserManager.GetUserName(User)</span>
-										<span class="text-white fs-8 opacity-75 fw-semibold lh-1" style="color:white"><strong>Admin</strong> </span>
+									<div class="d-none d-md-flex flex-column align-items-end justify-content-center me-2 me-md-4">										
 									</div>
 									<!--end::Name-->
 									<!--begin::Symbol-->
-									<div class="symbol symbol-30px symbol-md-40px">
-										<img src="~/AdminAssets/assets/media/avatars/blank.png" alt="image" />
+									<div>
+                                        <img src="~/assets/stationary/Bafo.png" />
 									</div>
 									<!--end::Symbol-->
 								</div>
@@ -838,10 +836,10 @@
 											<!--begin::Username-->
 											<div class="d-flex flex-column">
 												<div class="fw-bold d-flex align-items-center fs-5">
-													The A Team
-													<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
+													
+													<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2"></span>
 												</div>
-												<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">Team@ATeam.com</a>
+												
 											</div>
 											<!--end::Username-->
 										</div>
@@ -965,21 +963,8 @@
 									<!--begin:Menu link-->
 									<a class="menu-link py-3" href="@Url.Action("Dashboard", "Home")">
 										<span class="menu-title">
-											<span class="menu-text">Dashboards</span>
-											<span class="menu-desc">Summary & Reports</span>
-										</span>
-										<span class="menu-arrow d-lg-none"></span>
-									</a>
-									<!--end:Menu link-->
-								</div>
-								<!--end:Menu item-->
-								<!--begin:Menu item-->
-								<div class="menu-item">
-									<!--begin:Menu link-->
-									<a class="menu-link py-3" href="@Url.Action("Index", "Home")">
-										<span class="menu-title">
-											<span class="menu-text">Matters</span>
-											<span class="menu-desc">Active & Completed</span>
+											<span class="menu-text">Home</span>
+											<span class="menu-desc">Summary & Information</span>
 										</span>
 										<span class="menu-arrow d-lg-none"></span>
 									</a>
@@ -992,33 +977,36 @@
 									<a class="menu-link py-3" href="">
 										<span class="menu-title">
 											<span class="menu-text">Registration</span>
-											<span class="menu-desc">Users Registration</span>
+											<span class="menu-desc">Assistance & Registration</span>
 										</span>
 										<span class="menu-arrow d-lg-none"></span>
 									</a>
 									<!--end:Menu link-->
 								</div>
 								<!--end:Menu item-->
+
 								<!--begin:Menu item-->
 								<div class="menu-item">
 									<!--begin:Menu link-->
 									<a class="menu-link py-3" href="">
 										<span class="menu-title">
-											<span class="menu-text">Help</span>
-											<span class="menu-desc">Assistance & Information</span>
+											<span class="menu-text">Login</span>
+											<span class="menu-desc">User Login</span>
 										</span>
 										<span class="menu-arrow d-lg-none"></span>
 									</a>
 									<!--end:Menu link-->
 								</div>
-								<!--end:Menu item-->
+								<!--end:Menu item-->								
+
+								
 								<!--begin:Menu item-->
 								<div class="menu-item">
 									<!--begin:Menu link-->
 									<a class="menu-link py-3" href="@Url.Action("Logout", "Account")">
 										<span class="menu-title">
-											<span class="menu-text">Logout</span>
-											<span class="menu-desc">Go back to Menu</span>
+											<span class="menu-text">Contact Us</span>
+											<span class="menu-desc">Client Communication</span>
 										</span>
 									</a>
 									<!--end:Menu link-->
@@ -1054,20 +1042,20 @@
 						<div id="kt_app_footer" class="app-footer align-items-center justify-content-between">
 							<!--begin::Copyright-->
 							<div class="text-gray-900 order-2 order-md-1">
-								<span class="text-muted fw-semibold me-1">2025&copy;</span>
-								<a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">The A Team</a>
+								<span class="text-muted fw-semibold me-1"></span>
+								<a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary"></a>
 							</div>
 							<!--end::Copyright-->
 							<!--begin::Menu-->
 							<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
 								<li class="menu-item">
-									<a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
+									<a href="https://keenthemes.com" target="_blank" class="menu-link px-2"></a>
 								</li>
 								<li class="menu-item">
-									<a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a>
+									<a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2"></a>
 								</li>
 								<li class="menu-item">
-									<a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a>
+									<a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2"></a>
 								</li>
 							</ul>
 							<!--end::Menu-->

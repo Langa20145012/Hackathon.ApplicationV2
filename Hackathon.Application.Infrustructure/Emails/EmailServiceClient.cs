@@ -1,8 +1,10 @@
 ﻿using Hackathon.Application.BusinessRules.Contract;
+using Hackathon.Application.BusinessRules.Services.Implementation;
 using Hackathon.Application.BusinessRules.Services.Interface;
 using Hackathon.Application.Infrustructure.Helper;
 using Hackathon.Application.Models.Entities;
 using Hackathon.Application.Models.MV;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +18,14 @@ namespace Hackathon.Application.Infrustructure.Emails
         private readonly IEmailService _emailService;
         private readonly IMatterService _MatterService;
         private readonly IDocumentService _documentService;
+        private string recipient;
 
-        public EmailServiceClient(IEmailService emailService, IMatterService MatterService, IDocumentService documentService)
+        public EmailServiceClient(IEmailService emailService, IMatterService MatterService, IDocumentService documentService, IConfiguration configuration)
         {
             _emailService = emailService ?? throw new ArgumentNullException(nameof(emailService));
-            _MatterService = MatterService ?? throw new ArgumentNullException( nameof(MatterService));
+            _MatterService = MatterService ?? throw new ArgumentNullException(nameof(MatterService));
             _documentService = documentService ?? throw new ArgumentNullException(nameof(_documentService));
+            recipient = configuration["BankUserEmail:Value"];
         }
 
         /// <summary>
@@ -56,13 +60,17 @@ namespace Hackathon.Application.Infrustructure.Emails
         /// <returns>A task representing the asynchronous operation, with a boolean result indicating success</returns>
         public async Task<bool> SendEmailAsync(int matterId)
         {
-            
+
             Matter matter = _MatterService.GetMatterById(matterId);
             List<Document> documents = new List<Document>();
-            string recipient = "mfalteni@e4.co.za";
+
             string title = "ADV Complete";
-            //documents = _documentService.GetAllDocuments();
-            
+
+            var matterDetails = new MatterDetails1();
+
+            matterDetails.Matter = _MatterService.GetMatterById(matterId);
+            matterDetails.DocumentList = _documentService.GetAllDocument().Where(f => f.MatterId == matterId).ToList();
+
             string body = EmailHelper.GenerateEmailBody(false, documents, matter.AccountNumber);
 
 

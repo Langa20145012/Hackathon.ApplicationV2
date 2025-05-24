@@ -16,7 +16,7 @@ namespace Hackathon.Application.Infrustructure.Helper
     }
     public static class EmailHelper
     {
-        public static string GenerateEmailBody(bool isSuccess, List<Document> documents, string accountNumber, string processName = "ADV Process", string additionalMessage = null)
+        public static string GenerateEmailBody(bool isSuccess, List<Document> documents, string accountNumber, string processName = "ADV Process", string ADVPercentageMessage = null)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -55,11 +55,7 @@ namespace Hackathon.Application.Infrustructure.Helper
             }
             sb.AppendLine("</div>");
 
-            // Additional message if provided
-            if (!string.IsNullOrEmpty(additionalMessage))
-            {
-                sb.AppendLine($"<p>{additionalMessage}</p>");
-            }
+
 
             // Document table
             sb.AppendLine("<h3>Document Processing Results</h3>");
@@ -79,11 +75,11 @@ namespace Hackathon.Application.Infrustructure.Helper
                 sb.AppendLine($"<td class='status-cell {doc.Status}'>{doc.Status}</td>");
                 if (doc.Status == DocumentStatus.Rejected.ToString())
                 {
-                    sb.AppendLine($"<td class='error-message'>{doc.FileName}</td>");
+                    sb.AppendLine($"<td class='error-message'>{doc.ADVPercentage}</td>");
                 }
                 else
                 {
-                    sb.AppendLine($"<td class='success-message'>{doc.FileName}</td>");
+                    sb.AppendLine($"<td class='success-message'>{doc.ADVPercentage}</td>");
                 }
 
                 sb.AppendLine("</tr>");

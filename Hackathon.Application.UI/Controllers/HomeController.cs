@@ -1,6 +1,8 @@
 using Hackathon.Application.BusinessRules.Common.Utility;
 using Hackathon.Application.BusinessRules.Services.Implementation;
 using Hackathon.Application.BusinessRules.Services.Interface;
+using Hackathon.Application.Infrustructure.Emails;
+using Hackathon.Application.Models.Entities;
 using Hackathon.Application.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -12,19 +14,20 @@ namespace Hackathon.Application.UI.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IMatterService _MatterService;
 		private readonly IDocumentService _DocumentService;
+        private readonly EmailServiceClient _emailClient;
 
-		public HomeController(ILogger<HomeController> logger, IMatterService MatterService, IDocumentService DocumentServices)
+        public HomeController(ILogger<HomeController> logger, IMatterService MatterService, IDocumentService DocumentServices, EmailServiceClient emailClient)
         {
             _logger = logger;
             _MatterService = MatterService;
             _DocumentService = DocumentServices;
-
-		}
+            _emailClient = emailClient;
+        }
 
         [HttpPost]
         public IActionResult Initialize(int MatterId)
         {
-            var matter = _MatterService.Initialize(MatterId);
+            _emailClient.SendEmailAsync(_MatterService.Initialize(MatterId).MatterId);
             return RedirectToAction("Index");
         }
 

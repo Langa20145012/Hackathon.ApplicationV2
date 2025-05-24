@@ -9,14 +9,6 @@ using Hackathon.Application.Models.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.EntityFrameworkCore;
-using Hackathon.Application.BusinessRules.Common.Interfaces;
-using Hackathon.Application.BusinessRules.Contract;
-using Hackathon.Application.BusinessRules.Services.Implementation;
-using Hackathon.Application.BusinessRules.Services.Interface;
-using Hackathon.Application.Infrustructure.Data;
-using Hackathon.Application.Infrustructure.Repository;
-using Hackathon.Application.Models;
-using Hackathon.Application.Models.Entities;
 using Hackathon.Application.Infrustructure.Emails;
 
 var builder = WebApplication.CreateBuilder(args);

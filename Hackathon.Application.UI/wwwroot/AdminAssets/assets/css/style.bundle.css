@@ -7,7 +7,7 @@
     --bs-app-bg-color: #FBF6F0;
     --bs-app-blank-bg-color: #ffffff;
     --bs-app-header-sticky-bg-color: #ffffff;
-    --bs-app-header-primary-base-bg-color: #9fa39f;
+    --bs-app-header-primary-base-bg-color: #f6c000;
     --bs-app-header-secondary-base-bg-color: #ffffff;
     --bs-app-header-secondary-sticky-bg-color: #ffffff;
     --bs-app-header-secondary-sticky-box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05)
@@ -16,7 +16,7 @@
     --bs-app-bg-color: #0F1014;
     --bs-app-blank-bg-color: #151521;
     --bs-app-header-sticky-bg-color: #15171C;
-    --bs-app-header-primary-base-bg-color: #9fa39f;
+    --bs-app-header-primary-base-bg-color: #f6c000;
     --bs-app-header-secondary-base-bg-color: #15171C;
     --bs-app-header-secondary-sticky-bg-color: #15171C;
     --bs-app-header-secondary-sticky-box-shadow: none
